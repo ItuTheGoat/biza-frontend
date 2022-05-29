@@ -1,0 +1,54 @@
+.menu-button {
+  display: none !important;
+}
+
+.navbar {
+  background-color: #02a002;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+
+.navbar-brand {
+  font-weight: 400;
+  font-size: 2rem;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.nav-item {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.nav-item:hover {
+  color: rgb(220, 220, 220);
+  transition: 200ms ease-in-out;
+}
+
+.sideNav {
+}
+
+@media screen and (max-width: 600px) {
+  .menu-button {
+    display: block !important;
+    cursor: pointer;
+    height: 1.5rem;
+    color: white;
+  }
+
+  .nav-list {
+    display: none;
+  }
+}
