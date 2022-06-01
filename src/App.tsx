@@ -1,18 +1,20 @@
+import Container from "@mui/material/Container";
 import React, { FC } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
+import Layout from "./components/Layout";
 import NavBar, { INavPaths } from "./navbar/NavBar";
 
 const App: FC = () => {
-  const defaultPaths: INavPaths[] = [
-    { url: "/", name: "Home" },
-    { url: "/about", name: "About" },
-  ];
-
   return (
+    //
     <Router>
-      <NavBar defaultPaths={defaultPaths} />
+      <Layout>
+        <Container></Container>
+      </Layout>
+      {/* <NavBar defaultPaths={defaultPaths} /> */}
     </Router>
+    // </ThemeProvider>
   );
 };
 
