@@ -12,7 +12,7 @@ import { IconButton } from "@mui/material";
 import { ChevronLeft, ChevronRight } from "@mui/icons-material";
 import React, { FC } from "react";
 
-import { DRAWER_WIDTH } from "../utils/constants";
+import { APP_BAR_HEIGHT, DRAWER_WIDTH } from "../utils/constants";
 import { INavPaths } from "../navbar/NavBar";
 import { Link } from "react-router-dom";
 
@@ -24,6 +24,7 @@ interface Props {
 
 const DrawerHeader = styled("div")(({ theme }) => ({
   display: "flex",
+  height: APP_BAR_HEIGHT,
   alignItems: "center",
   padding: theme.spacing(0, 1),
   // necessary for content to be below app bar
@@ -45,7 +46,7 @@ const Sidebar = ({
       open={open}
       sx={{
         width: DRAWER_WIDTH,
-        backgroundColor: theme.palette.primary.main,
+
         flexShrink: 0,
         "& .MuiDrawer-paper": {
           width: DRAWER_WIDTH,

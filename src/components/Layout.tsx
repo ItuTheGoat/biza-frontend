@@ -55,8 +55,11 @@ const Footer = styled("div", {
   shouldForwardProp: (prop) => prop !== "open",
 })<{ open?: boolean }>(({ theme, open }) => ({
   height: FOOTER_HEIGHT,
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
   padding: theme.spacing(3),
-  backgroundColor: "green",
+
   transition: theme.transitions.create("margin", {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.leavingScreen,
